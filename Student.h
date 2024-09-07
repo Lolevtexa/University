@@ -2,7 +2,6 @@
 #define STUDENT_H
 
 #include <iostream>
-#include <vector>
 #include <cstring>
 
 struct Student {
@@ -12,6 +11,7 @@ struct Student {
     int name_length;
     int faculty_length;
 
+    Student();
     Student(const char* name, int crs, const char* fct);
     ~Student();
     Student(const Student& other);
@@ -19,7 +19,7 @@ struct Student {
 };
 
 void print_student(const Student& student);
-void print_students(const std::vector<Student>& students);
-void add_student(std::vector<Student>& students);
+void print_students(Student* students, int student_count);
+void add_student(Student* students, int& student_count, int max_students);
 
 #endif

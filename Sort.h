@@ -3,7 +3,7 @@
 
 #include "Student.h"
 
-void bubble_sort(const std::vector<Student>& students);
-void selection_sort(const std::vector<Student>& students);
+void bubble_sort(const Student* students, int student_count);
+void selection_sort(const Student* students, int student_count);
 
 #endif

@@ -3,7 +3,14 @@
 #include <iostream>
 
 int main() {
-    std::vector<Student> students;
+    int max_students;
+    std::cout << "Введите максимальное количество студентов: ";
+    std::cin >> max_students;
+    std::cin.ignore();
+
+    Student* students = new Student[max_students];
+    int student_count = 0;
+
     char command;
     bool running = true;
     while (running) {
@@ -12,16 +19,16 @@ int main() {
         std::cin.ignore();
         switch (command) {
             case '1':
-                add_student(students);
+                add_student(students, student_count, max_students);
                 break;
             case '2':
-                print_students(students);
+                print_students(students, student_count);
                 break;
             case '3':
-                bubble_sort(students);
+                bubble_sort(students, student_count);
                 break;
             case '4':
-                selection_sort(students);
+                selection_sort(students, student_count);
                 break;
             case '5':
                 running = false;
@@ -30,5 +37,7 @@ int main() {
                 std::cout << "Неверный ввод, попробуйте снова.\n";
         }
     }
+
+    delete[] students; // Освобождение выделенной памяти
     return 0;
 }

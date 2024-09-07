@@ -1,43 +1,34 @@
-// main.cpp
 #include "Student.h"
 #include "Sort.h"
+#include <iostream>
 
 int main() {
     std::vector<Student> students;
-    int choice;
-    bool exit = false;
-
-    while (!exit) {
-        std::cout << "1. Добавить студента\n";
-        std::cout << "2. Вывести всех студентов\n";
-        std::cout << "3. Сортировать пузырьком\n";
-        std::cout << "4. Сортировать выбором\n";
-        std::cout << "5. Выход\n";
-        std::cout << "Выберите опцию: ";
-        std::cin >> choice;
+    char command;
+    bool running = true;
+    while (running) {
+        std::cout << "1. Добавить студента\n2. Показать студентов\n3. Сортировка пузырьком\n4. Сортировка выбором\n5. Выход\nВведите ваш выбор: ";
+        std::cin >> command;
         std::cin.ignore();
-
-        switch (choice) {
-            case 1:
+        switch (command) {
+            case '1':
                 add_student(students);
                 break;
-            case 2:
+            case '2':
                 print_students(students);
                 break;
-            case 3:
+            case '3':
                 bubble_sort(students);
                 break;
-            case 4:
+            case '4':
                 selection_sort(students);
                 break;
-            case 5:
-                exit = true;
+            case '5':
+                running = false;
                 break;
             default:
-                std::cout << "Неверный ввод. Попробуйте еще раз.\n";
-                break;
+                std::cout << "Неверный ввод, попробуйте снова.\n";
         }
     }
-
     return 0;
 }

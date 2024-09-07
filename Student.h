@@ -1,17 +1,21 @@
-// Student.h
 #ifndef STUDENT_H
 #define STUDENT_H
 
 #include <iostream>
-#include <string>
 #include <vector>
+#include <cstring>
 
 struct Student {
-    std::string full_name;
+    char* full_name;
     int course;
-    std::string faculty;
+    char* faculty;
+    int name_length;
+    int faculty_length;
 
-    Student(std::string name, int crs, std::string fct) : full_name(name), course(crs), faculty(fct) {}
+    Student(const char* name, int crs, const char* fct);
+    ~Student();
+    Student(const Student& other);
+    Student& operator=(const Student& other);
 };
 
 void print_student(const Student& student);

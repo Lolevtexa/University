@@ -1,6 +1,6 @@
 #include "Sort.h"
 #include <iostream>
-#include <algorithm> // for std::swap
+#include <algorithm>
 
 void bubble_sort(const Student* students, int student_count) {
     Student* temp_students = new Student[student_count];
@@ -96,16 +96,16 @@ void quick_sort(const Student* students, int student_count) {
 }
 
 void heapify(Student* students, int n, int i, int& compares, int& swaps) {
-    int smallest = i;  // Change to create a min-heap
+    int smallest = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
 
     compares++;
-    if (left < n && students[left].course < students[smallest].course)  // Compare for the smallest value
+    if (left < n && students[left].course < students[smallest].course)
         smallest = left;
 
     compares++;
-    if (right < n && students[right].course < students[smallest].course)  // Compare for the smallest value
+    if (right < n && students[right].course < students[smallest].course)
         smallest = right;
 
     if (smallest != i) {

@@ -1,0 +1,15 @@
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/bin/Debug/net6.0/Investment-portfolio-management-system
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/bin/Debug/net6.0/Investment-portfolio-management-system.deps.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/bin/Debug/net6.0/Investment-portfolio-management-system.runtimeconfig.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/bin/Debug/net6.0/Investment-portfolio-management-system.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/bin/Debug/net6.0/ref/Investment-portfolio-management-system.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/bin/Debug/net6.0/Investment-portfolio-management-system.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.csproj.AssemblyReference.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.GeneratedMSBuildEditorConfig.editorconfig
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.AssemblyInfoInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.AssemblyInfo.cs
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.csproj.CoreCompileInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/ref/Investment-portfolio-management-system.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/Investment-portfolio-management-system/obj/Debug/net6.0/Investment-portfolio-management-system.genruntimeconfig.cache

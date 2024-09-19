@@ -1,7 +1,6 @@
 #include "Search.h"
 #include <iostream>
 
-// Прямой (последовательный) поиск
 void sequential_search(Student* sorted_students, int size, const int& key, int& left_index, int& right_index) {
     left_index = -1;
     right_index = -1;
@@ -20,18 +19,9 @@ void sequential_search(Student* sorted_students, int size, const int& key, int& 
     }
 }
 
-// Бинарный поиск (предполагается, что массив отсортирован)
 void binary_search(Student* sorted_students, int size, const int& key, int& left_index, int& right_index) {
     left_index = -1;
     right_index = -1;
-
-    // Проверка на сортированность массива
-    for (int i = 1; i < size; ++i) {
-        if (sorted_students[i].course < sorted_students[i - 1].course) {
-            std::cout << "Ошибка: массив не отсортирован. Бинарный поиск невозможен.\n";
-            return;
-        }
-    }
 
     int left = 0, right = size - 1;
     while (left <= right) {

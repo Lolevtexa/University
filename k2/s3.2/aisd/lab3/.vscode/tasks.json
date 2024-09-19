@@ -4,10 +4,10 @@
         {
             "label": "Build C++ project",
             "type": "shell",
-            "command": "/usr/bin/g++",
+            "command": "g++",
             "args": [
                 "-g",
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}/source/*.cpp",
                 "-o",
                 "${workspaceFolder}/studentProgram",
                 "-std=c++11"

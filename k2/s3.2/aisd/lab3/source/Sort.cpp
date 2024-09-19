@@ -1,7 +1,6 @@
-
 #include "Sort.h"
 #include <iostream>
-#include <algorithm> // for std::swap
+#include <algorithm>
 
 Student* bubble_sort(const Student* students, int student_count) {
     Student* temp_students = new Student[student_count];
@@ -26,7 +25,7 @@ Student* bubble_sort(const Student* students, int student_count) {
     }
 
     std::cout << "Пузырьковая сортировка: сравнений - " << compares << ", обменов - " << swaps << ".\n";
-    return temp_students; // Return the sorted array
+    return temp_students;
 }
 
 Student* selection_sort(const Student* students, int student_count) {
@@ -51,7 +50,7 @@ Student* selection_sort(const Student* students, int student_count) {
     }
 
     std::cout << "Сортировка выбором: сравнений - " << compares << ", обменов - " << swaps << ".\n";
-    return temp_students; // Return the sorted array
+    return temp_students;
 }
 
 void quick_sort_helper(Student* students, int low, int high, int& compares, int& swaps) {
@@ -86,7 +85,7 @@ Student* quick_sort(const Student* students, int student_count) {
     quick_sort_helper(temp_students, 0, student_count - 1, compares, swaps);
 
     std::cout << "Быстрая сортировка: сравнений - " << compares << ", обменов - " << swaps << ".\n";
-    return temp_students; // Return the sorted array
+    return temp_students;
 }
 
 void heapify(Student* students, int n, int i, int& compares, int& swaps) {
@@ -119,12 +118,10 @@ Student* heap_sort(const Student* students, int student_count) {
 
     int compares = 0, swaps = 0;
     
-    // Build heap
     for (int i = student_count / 2 - 1; i >= 0; i--) {
         heapify(temp_students, student_count, i, compares, swaps);
     }
 
-    // Extract elements from heap one by one
     for (int i = student_count - 1; i > 0; i--) {
         std::swap(temp_students[0], temp_students[i]);
         swaps++;
@@ -132,5 +129,5 @@ Student* heap_sort(const Student* students, int student_count) {
     }
 
     std::cout << "Пирамидальная сортировка: сравнений - " << compares << ", обменов - " << swaps << ".\n";
-    return temp_students; // Return the sorted array
+    return temp_students;
 }

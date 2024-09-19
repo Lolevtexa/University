@@ -61,7 +61,6 @@ void search_menu(Student* sorted_students, int student_count) {
     }
 
     if (left_index != -1 && right_index != -1) {
-        // Выводим только студентов, которые находятся в найденном диапазоне
         print_students_range(sorted_students, left_index, right_index);
     } else {
         std::cout << "Студенты на данном курсе не найдены\n";
@@ -118,7 +117,7 @@ int main() {
         }
     }
 
-    delete[] students; // Освобождение выделенной памяти
-    delete[] sorted_students; // Освобождение памяти для отсортированных студентов
+    delete[] students;
+    delete[] sorted_students;
     return 0;
 }

@@ -1,0 +1,15 @@
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/bin/Debug/net6.0/Car2
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/bin/Debug/net6.0/Car2.deps.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/bin/Debug/net6.0/Car2.runtimeconfig.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/bin/Debug/net6.0/Car2.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/bin/Debug/net6.0/ref/Car2.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/bin/Debug/net6.0/Car2.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.csproj.AssemblyReference.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.GeneratedMSBuildEditorConfig.editorconfig
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.AssemblyInfoInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.AssemblyInfo.cs
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.csproj.CoreCompileInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/ref/Car2.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/9/Car2/obj/Debug/net6.0/Car2.genruntimeconfig.cache

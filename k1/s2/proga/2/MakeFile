@@ -1,0 +1,8 @@
+all:
+	cd build/String/; g++ -c -Wall ../../lib/String/*.cpp; cd ../../
+
+	cd build/Text/;   g++ -c -Wall ../../lib/Text/*.cpp;   cd ../../
+
+	g++ -Wall src/Main.cpp build/String/*.o build/Text/*.o -o build/build.exe
+	
+	./build/build.exe	

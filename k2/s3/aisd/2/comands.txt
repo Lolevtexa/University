@@ -1,0 +1,11 @@
+g++ src/Example.cpp -o build/Example.out && ./build/Example.out
+
+g++ src/CheckingSorted.cpp -o build/CheckingSorted.out && time ./build/CheckingSorted.out
+g++ src/CheckingAlmostSorted.cpp -o build/CheckingAlmostSorted.out && time ./build/CheckingAlmostSorted.out
+g++ src/CheckingReverseSorted.cpp -o build/CheckingReverseSorted.out && time ./build/CheckingReverseSorted.out
+g++ src/Checking.cpp -o build/Checking.out && time ./build/Checking.out
+
+g++ src/CheckingOnSmall.cpp -o build/CheckingOnSmall.out && ./build/CheckingOnSmall.out
+
+python3 src/Plot.py > results/Plot.txt
+cat src/*.cpp lib/*.h > out

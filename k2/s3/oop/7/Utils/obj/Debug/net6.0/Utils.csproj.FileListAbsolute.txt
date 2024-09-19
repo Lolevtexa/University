@@ -1,0 +1,15 @@
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.csproj.AssemblyReference.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.GeneratedMSBuildEditorConfig.editorconfig
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.AssemblyInfoInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.AssemblyInfo.cs
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.csproj.CoreCompileInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/bin/Debug/net6.0/Utils
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/bin/Debug/net6.0/Utils.deps.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/bin/Debug/net6.0/Utils.runtimeconfig.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/bin/Debug/net6.0/Utils.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/bin/Debug/net6.0/ref/Utils.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/bin/Debug/net6.0/Utils.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/ref/Utils.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/Utils/obj/Debug/net6.0/Utils.genruntimeconfig.cache

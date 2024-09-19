@@ -1,0 +1,18 @@
+PROJECT_ROOT := $(shell pwd)
+
+all:
+	cd build/; mkdir -p Number/Node; mkdir -p String/Node; mkdir -p List/Node; mkdir -p UserInterface; cd $(PROJECT_ROOT)
+	cd build/; rm -f */*.o */*/*.o; cd $(PROJECT_ROOT)
+
+	cd build/Number/Node/;   g++ -c -Wall $(PROJECT_ROOT)/lib/Number/Node/*.cpp;   cd $(PROJECT_ROOT)
+	cd build/Number/;        g++ -c -Wall $(PROJECT_ROOT)/lib/Number/*.cpp;        cd $(PROJECT_ROOT)
+	cd build/String/Node/;   g++ -c -Wall $(PROJECT_ROOT)/lib/String/Node/*.cpp;   cd $(PROJECT_ROOT)
+	cd build/String/;        g++ -c -Wall $(PROJECT_ROOT)/lib/String/*.cpp;        cd $(PROJECT_ROOT)
+	cd build/List/Node/;     g++ -c -Wall $(PROJECT_ROOT)/lib/List/Node/*.cpp;     cd $(PROJECT_ROOT)
+	cd build/List/;          g++ -c -Wall $(PROJECT_ROOT)/lib/List/*.cpp;          cd $(PROJECT_ROOT)
+	cd build/UserInterface/; g++ -c -Wall $(PROJECT_ROOT)/lib/UserInterface/*.cpp; cd $(PROJECT_ROOT)
+	
+	g++ -Wall build/*/*.o build/*/*/*.o src/Main.cpp -o build/build.out
+
+	# ./build/build.out
+	./build/build.out < files/in

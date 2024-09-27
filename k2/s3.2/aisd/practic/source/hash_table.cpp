@@ -39,9 +39,9 @@ bool HashTable::remove(const std::string& inventory_number) {
     int hash_value = hashFunction(inventory_number);
     int step = 0;
 
-    while (!table[hash_value].inventory_number.empty() && step < size) {
-        if (table[hash_value].inventory_number == inventory_number) {
-            table[hash_value] = Bike();
+    while (step < size && !table[hash_value].inventory_number.empty()) {
+        if (table[hash_value].inventory_number == inventory_number && table[hash_value].isActive) {
+            table[hash_value].isActive = false;
             return true;
         }
         hash_value = linearProbe(hash_value, ++step);
@@ -54,8 +54,11 @@ Bike* HashTable::search(const std::string& inventory_number) {
     int hash_value = hashFunction(inventory_number);
     int step = 0;
 
-    while (!table[hash_value].inventory_number.empty() && step < size) {
-        if (table[hash_value].inventory_number == inventory_number) {
+    while (step < size) {
+        if (table[hash_value].inventory_number.empty() && !table[hash_value].isActive) {
+            return nullptr;
+        }
+        if (table[hash_value].isActive && table[hash_value].inventory_number == inventory_number) {
             return &table[hash_value];
         }
         hash_value = linearProbe(hash_value, ++step);
@@ -67,7 +70,7 @@ Bike* HashTable::search(const std::string& inventory_number) {
 std::vector<Bike> HashTable::searchByModelFragment(const std::string& modelFragment) {
     std::vector<Bike> results;
     for (const auto& bike : table) {
-        if (!bike.inventory_number.empty() && rabinKarpSearch(bike.model, modelFragment)) {
+        if (!bike.inventory_number.empty() && bike.isActive && rabinKarpSearch(bike.model, modelFragment)) {
             results.push_back(bike);
         }
     }
@@ -76,7 +79,7 @@ std::vector<Bike> HashTable::searchByModelFragment(const std::string& modelFragm
 
 void HashTable::display() {
     for (const auto& bike : table) {
-        if (!bike.inventory_number.empty()) {
+        if (!bike.inventory_number.empty() && bike.isActive) {
             std::cout << "Инвентарный номер: " << bike.inventory_number
                       << " Модель: " << bike.model
                       << " Цвет: " << bike.color

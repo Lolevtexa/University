@@ -57,6 +57,16 @@
                 "isDefault": true
             },
             "detail": "Outputs the contents of all files in the source folder to the tmp file."
-        }        
+        },
+        {
+            "label": "zip-folder",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/source && rm -f ${workspaceFolder}/report/source.zip  && zip -r ${workspaceFolder}/report/source.zip .",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }     
     ]
 }

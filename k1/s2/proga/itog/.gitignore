@@ -1,0 +1,57 @@
+# Игнорируем директорию сборки
+/build/
+/bin/
+/project/
+
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/build.ninja
+/.ninja_deps
+/.ninja_log
+
+# Файлы временной сборки
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.log
+
+# Файлы отладки
+*.pdb
+*.ilk
+*.map
+*.dSYM/
+*.stackdump
+
+# Файлы CMake
+CMakeLists.txt.user
+*.cmake
+*.cache
+*.swp
+
+# VS Code конфигурации
+.vscode/
+launch.json
+tasks.json
+
+# Конфигурации CLangd
+.clangd
+.clang-tidy
+.clang-format
+
+# Файлы CLion
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# Игнорируем тестовые файлы и временные файлы
+*.tmp
+*.swp
+*.swo
+*.bak

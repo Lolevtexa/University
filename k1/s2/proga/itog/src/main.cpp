@@ -2,7 +2,7 @@
 #include "elements/passive/TextLabel.h"
 
 int main() {
-  Window window(20, 10);
+  Window window("Hello", 20, 10);
   window.addDisplayElement(new TextLabel("Hello1", 9, 8, 1, 1));
   window.addDisplayElement(new TextLabel("Hello2", 9, 8, 10, 1));
 

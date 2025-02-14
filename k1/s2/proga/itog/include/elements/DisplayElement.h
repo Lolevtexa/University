@@ -4,7 +4,7 @@
 #include <vector>
 
 class DisplayElement {
-private:
+protected:
   const static std::vector<std::vector<Pixel>> edging;
 
 public:

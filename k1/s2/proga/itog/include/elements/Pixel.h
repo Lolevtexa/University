@@ -2,7 +2,6 @@
 #include <cstring>
 #include <iostream>
 
-
 struct Pixel {
   char value[2];
 

@@ -4,7 +4,7 @@
 Window::Window(const int &width, const int &height, const int &x, const int &y)
     : DisplayElement(width, height, x, y) {}
 
-void Window::appDisplayElement(DisplayElement *displayElement) {
+void Window::addDisplayElement(DisplayElement *displayElement) {
   displayElements.push_back(displayElement);
 
   for (int y = 0; y < displayElement->displayData.size(); y++) {

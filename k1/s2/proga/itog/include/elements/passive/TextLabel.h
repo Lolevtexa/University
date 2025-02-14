@@ -3,7 +3,8 @@
 
 class TextLabel : public PassiveElement {
 public:
-  TextLabel(const int &width, const int &height, const std::string &text);
+  TextLabel(const std::string &text, const int &width = 2,
+            const int &height = 2, const int &x = 0, const int &y = 0);
 
   void SetText(const std::string &text);
 };

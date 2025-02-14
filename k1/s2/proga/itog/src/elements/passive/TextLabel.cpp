@@ -1,8 +1,8 @@
 #include "elements/passive/TextLabel.h"
 
-TextLabel::TextLabel(const int &width, const int &height,
-                     const std::string &text)
-    : PassiveElement(width, height) {
+TextLabel::TextLabel(const std::string &text, const int &width,
+                     const int &height, const int &x, const int &y)
+    : PassiveElement(width, height, x, y) {
   SetText(text);
 }
 

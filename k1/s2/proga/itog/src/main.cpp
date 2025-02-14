@@ -1,11 +1,14 @@
+#include "core/Window.h"
 #include "elements/passive/TextLabel.h"
 
 int main() {
-  TextLabel label(3, 15, "Hello, World!");
+  Window window(20, 10);
+  window.appDisplayElement(new TextLabel("Hello1", 9, 8, 1, 1));
+  window.appDisplayElement(new TextLabel("Hello2", 9, 8, 10, 1));
 
-  for (int i = 0; i < label.displayData.size(); i++) {
-    for (int j = 0; j < label.displayData[i].size(); j++) {
-      std::cout << label.displayData[i][j];
+  for (int y = 0; y < window.displayData.size(); y++) {
+    for (int x = 0; x < window.displayData[y].size(); x++) {
+      std::cout << window.displayData[y][x];
     }
     std::cout << std::endl;
   }

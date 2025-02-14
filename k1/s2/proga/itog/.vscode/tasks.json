@@ -2,35 +2,18 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "CMake: Configure (Clang + Ninja)",
+            "label": "Build Project with clang++",
             "type": "shell",
-            "command": "D:/Tools/CMake/bin/cmake",
+            "command": "bash",
             "args": [
-                "-G", "Ninja",
-                "-B", "${workspaceFolder}/build",
-                "-S", "${workspaceFolder}",
-                "-DCMAKE_MAKE_PROGRAM=D:/Tools/Ninja/ninja.exe",
-                "-DCMAKE_C_COMPILER=D:/Tools/MinGW/bin/clang.exe",
-                "-DCMAKE_CXX_COMPILER=D:/Tools/MinGW/bin/clang++.exe"
+                "-c",
+                "clang++ -g -std=c++20 -Wall $(find ${workspaceFolder}/src -name \"*.cpp\") -o ${workspaceFolder}/build/main -I ${workspaceFolder}/include/"
             ],
-            "group": { "kind": "build", "isDefault": true },
-            "problemMatcher": ["$gcc"]
-        },
-        {
-            "label": "CMake: Build",
-            "type": "shell",
-            "command": "D:/Tools/CMake/bin/cmake",
-            "args": ["--build", "${workspaceFolder}/build"],
-            "group": { "kind": "build", "isDefault": true },
-            "dependsOn": ["CMake: Configure"],
-            "problemMatcher": ["$gcc"]
-        },
-        {
-            "label": "Clean Build",
-            "type": "shell",
-            "command": "powershell",
-            "args": ["-Command", "Remove-Item -Recurse -Force ${workspaceFolder}/build"],
-            "group": { "kind": "build", "isDefault": true }
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Сборка проекта с использованием clang++ для отладки"
         }
     ]
 }

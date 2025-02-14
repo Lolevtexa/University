@@ -2,13 +2,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug CMake Project",
+            "name": "Debug with clang++",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/my_project.exe",
+            "program": "${workspaceFolder}/build/main",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "terminal": "integrated"
+            "preLaunchTask": "Build Project with clang++",
+            "stopOnEntry": false
         }
     ]
 }

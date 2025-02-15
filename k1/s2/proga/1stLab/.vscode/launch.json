@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug with clang++",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/main",
+            "args": [
+                "${workspaceFolder}/test/input.bin",
+                "-tr", "0.04"
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build Project with clang++",
+            "stopOnEntry": false
+        }
+    ]
+}

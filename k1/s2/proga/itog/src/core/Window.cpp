@@ -1,7 +1,7 @@
 #include "core/Window.h"
 #include "elements/DisplayElement.h"
 
-Window::Window(const std::string name, const int &width, const int &height,
+Window::Window(const std::string &name, const int &width, const int &height,
                const int &x, const int &y)
     : DisplayElement(width, height, x, y), name(name) {
   for (int x = 0, i = 0; x < width && i < name.size(); x++, i += 2) {
@@ -20,6 +20,22 @@ void Window::addDisplayElement(DisplayElement *displayElement) {
     for (int x = 0; x < displayElement->displayData[y].size(); x++) {
       displayData[displayElement->y + y][displayElement->x + x] =
           displayElement->displayData[y][x];
+    }
+  }
+}
+
+void Window::addTextLabel(TextLabel *textLabel) {
+  textLabels.push_back(textLabel);
+  addDisplayElement(textLabel);
+}
+
+void Window::draw() {
+  for (auto displayElement : displayElements) {
+    for (int y = 0; y < displayElement->displayData.size(); y++) {
+      for (int x = 0; x < displayElement->displayData[y].size(); x++) {
+        displayData[displayElement->y + y][displayElement->x + x] =
+            displayElement->displayData[y][x];
+      }
     }
   }
 }

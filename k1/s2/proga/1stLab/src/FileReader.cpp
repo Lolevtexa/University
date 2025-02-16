@@ -9,7 +9,7 @@ std::vector<unsigned char> FileReader::readBytes() const {
   std::ifstream file(filename, std::ios::binary);
 
   if (!file) {
-    std::cerr << "Ошибка: Не удалось открыть файл " << filename << std::endl;
+    std::cerr << "Error: Failed to open file " << filename << std::endl;
     return bytes;
   }
 

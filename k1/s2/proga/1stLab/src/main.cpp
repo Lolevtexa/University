@@ -7,8 +7,8 @@
 
 int main(int argc, char *argv[]) {
   if (argc < 3) {
-    std::cerr << "Использование: " << argv[0]
-              << " <имя файла> -tr <граничное значение>" << std::endl;
+    std::cerr << "Usage: " << argv[0] << " <file name> -tr <threshold>"
+              << std::endl;
     return 1;
   }
 
@@ -27,13 +27,13 @@ int main(int argc, char *argv[]) {
       analyzer.calculateFrequencies(threshold);
   std::map<unsigned char, int> counts = analyzer.countBytes(threshold);
 
-  std::cout << "Частоты встречаемости байтов:" << std::endl;
+  std::cout << "Byte occurrence frequencies:" << std::endl;
   Utils::printFrequencies(frequencies);
 
-  std::cout << "\nКоличественное представление:" << std::endl;
+  std::cout << "\nQuantitative representation:" << std::endl;
   Utils::printCounts(counts);
 
-  std::cout << "\nГистограмма:" << std::endl;
+  std::cout << "\nHistogram:" << std::endl;
   Histogram::plotHistogram(frequencies, 4);
 
   return 0;

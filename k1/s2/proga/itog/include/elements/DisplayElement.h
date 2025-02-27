@@ -18,4 +18,6 @@ public:
 public:
   DisplayElement(const int &width = 2, const int &height = 2, const int &x = 0,
                  const int &y = 0, const bool &drawEdging = true);
+
+  void Draw();
 };

@@ -9,6 +9,10 @@ public:
   Window windowNames;
   int windowNumber = -1;
 
+  // Window contextMenu;
+
+  // Window fileExplorer;
+
   bool isClose = false;
 
 public:
@@ -16,14 +20,14 @@ public:
 
   void addWindow(const Window &window, const bool &isCurrent = true);
 
-  void event();
+  void Event();
 
-  void update();
+  void Update();
 
-  void draw();
+  void Draw();
 
 private:
   void updateWindowNames();
 
-  void draw(Window &window);
+  void Draw(Window &window);
 };

@@ -8,6 +8,10 @@ DisplayElement::DisplayElement(const int &width, const int &height,
                                const bool &drawEdging)
     : width(width), height(height), x(x), y(y), drawEdging(drawEdging),
       displayData(height, std::vector<Pixel>(width)) {
+  Draw();
+}
+
+void DisplayElement::Draw() {
   if (drawEdging) {
     displayData[0][0] = edging[0][0];
 

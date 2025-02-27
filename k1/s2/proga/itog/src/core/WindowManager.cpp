@@ -7,26 +7,27 @@
 
 WindowManager::WindowManager()
     : DisplayElement(30 + 10, 30, 0, 0, false), windowNames("Windows", 10, 30) {
-  windowNames.addTextLabel(new TextLabel("", 8, 28, 1, 1));
-  draw(windowNames);
+  windowNames.addTextLabel(
+      new TextLabel({.tabSize = 0, .lineNumbering = true}, {""}, 8, 28, 1, 1));
+  Draw(windowNames);
 }
 
 void WindowManager::addWindow(const Window &window, const bool &isCurrent) {
   if (isCurrent) {
     windows.push_front(window);
-    draw(windows[0]);
+    Draw(windows[0]);
   } else {
     windows.push_back(window);
 
     for (auto it = windows.rbegin(); it != windows.rend(); it++) {
-      draw(*it);
+      Draw(*it);
     }
   }
 
   updateWindowNames();
 }
 
-void WindowManager::event() {
+void WindowManager::Event() {
   std::cin >> windowNumber;
   windowNumber--;
 }
@@ -37,11 +38,11 @@ void WindowManager::updateWindowNames() {
     names.push_back(it->name);
   }
 
-  windowNames.textLabels[0]->SetText(names, numberingTypes::parentheses);
-  draw(windowNames);
+  windowNames.textLabels[0]->SetText(names);
+  Draw(windowNames);
 }
 
-void WindowManager::update() {
+void WindowManager::Update() {
   if (std::clamp(windowNumber, 0, int(windows.size() - 1)) == windowNumber) {
     std::swap(windows[0], windows[windowNumber]);
 
@@ -51,8 +52,8 @@ void WindowManager::update() {
   }
 }
 
-void WindowManager::draw(Window &window) {
-  window.draw();
+void WindowManager::Draw(Window &window) {
+  window.Draw();
 
   for (int y = 0; y < window.displayData.size(); y++) {
     for (int x = 0; x < window.displayData[y].size(); x++) {
@@ -61,11 +62,11 @@ void WindowManager::draw(Window &window) {
   }
 }
 
-void WindowManager::draw() {
+void WindowManager::Draw() {
   for (auto window : windows) {
-    draw(window);
+    Draw(window);
   }
-  draw(windows[windowNumber]);
+  Draw(windows[windowNumber]);
 
   for (int y = 0; y < displayData.size(); y++) {
     for (int x = 0; x < displayData[y].size(); x++) {

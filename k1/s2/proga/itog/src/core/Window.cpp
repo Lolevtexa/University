@@ -29,8 +29,10 @@ void Window::addTextLabel(TextLabel *textLabel) {
   addDisplayElement(textLabel);
 }
 
-void Window::draw() {
+void Window::Draw() {
   for (auto displayElement : displayElements) {
+    displayElement->Draw();
+
     for (int y = 0; y < displayElement->displayData.size(); y++) {
       for (int x = 0; x < displayElement->displayData[y].size(); x++) {
         displayData[displayElement->y + y][displayElement->x + x] =

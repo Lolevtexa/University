@@ -17,5 +17,5 @@ public:
   void addDisplayElement(DisplayElement *displayElement);
   void addTextLabel(TextLabel *textLabel);
 
-  void draw();
+  void Draw();
 };

@@ -1,95 +1,73 @@
 #include "elements/passive/TextLabel.h"
-#include "elements/Pixel.h"
+#include "elements/DisplayElement.h"
 #include <algorithm>
 #include <string>
 
-const std::vector<Pixel> TextLabel::numberingList = {"  ", ": ", ") ", "] ",
-                                                     "; "};
-
-TextLabel::TextLabel(const std::vector<std::string> &text, const int &width,
+TextLabel::TextLabel(const TextFormatOptions &options,
+                     const std::vector<std::string> &text, const int &width,
                      const int &height, const int &x, const int &y,
-                     const int &numberingType)
-    : PassiveElement(width, height, x, y) {
-  SetText(text, numberingType);
+                     const bool &drawEdging)
+    : PassiveElement(width, height, x, y, drawEdging), options(options) {
+  SetText(text);
 }
 
-TextLabel::TextLabel(const std::string &string, const int &width,
-                     const int &height, const int &x, const int &y)
-    : PassiveElement(width, height, x, y) {
-  SetText(string);
+void TextLabel::SetText(const std::vector<std::string> &text) {
+  this->text = text;
+  TextFormading();
 }
 
-void TextLabel::SetText(const std::vector<std::string> &text,
-                        const int &numberingType) {
-  int height = displayData.size() - 2;
-  int width = displayData[height].size() - 2;
+void TextLabel::Draw() {
+  DisplayElement::Draw();
 
-  Pixel numberingCharacter = numberingList[numberingType];
+  int height = displayData.size() - 2 * drawEdging;
+  int width = displayData[height].size() - 2 * drawEdging;
+  int dX = drawEdging + options.indentSize / 2; // нечётный indentSize разобрать
+  int dY = drawEdging;
 
-  for (int y = 1, paragraphNumber = 0, symbolNumber = -4; y < height + 1; y++) {
-    Pixel paragraphPixel;
+  for (int y = dY, paragraphNumber = 0, symbolNumber = 0; y < height + dY;
+       y++) {
+    for (int x = dX; x < width + dX - options.indentSize / 2; x++) {
+      if (symbolNumber < (int)formattedText[paragraphNumber].size()) {
+        displayData[y][x].value[0] = formattedText[paragraphNumber][symbolNumber];
 
-    if (numberingType) {
-      std::string paragraphNumberString = "  ";
-      if (std::clamp(paragraphNumber, 0, 8) == paragraphNumber) {
-        paragraphNumberString = " " + std::to_string(paragraphNumber + 1);
-      } else {
-        paragraphNumberString = std::to_string(paragraphNumber + 1);
-      }
-
-      paragraphPixel = paragraphNumberString;
-    }
-
-    for (int x = 1; x < width + 1; x++) {
-      if (symbolNumber < (int)text[paragraphNumber].size()) {
-        bool flag = false;
-
-        Pixel p;
-        switch (symbolNumber) {
-        case -4:
-          displayData[y][x] = paragraphPixel;
+        if (symbolNumber + 1 != formattedText[paragraphNumber].size()) {
+          displayData[y][x].value[1] = formattedText[paragraphNumber][symbolNumber + 1];
           symbolNumber += 2;
-          break;
-
-        case -2:
-          displayData[y][x] = numberingCharacter;
-          symbolNumber += 2;
-          break;
-
-        default:
-          p.value[0] = text[paragraphNumber][symbolNumber];
-
-          if (symbolNumber + 1 != text[paragraphNumber].size()) {
-            p.value[1] = text[paragraphNumber][symbolNumber + 1];
-            symbolNumber += 2;
-
-            displayData[y][x] = p;
-          } else {
-            paragraphNumber++;
-            symbolNumber = -4;
-
-            displayData[y][x] = p;
-
-            flag = true;
-          }
+        } else {
+          paragraphNumber++;
+          symbolNumber = 0;
           break;
         }
-
-        if (flag)
-          break;
-
       } else {
         paragraphNumber++;
-        symbolNumber = -4;
+        symbolNumber = 0;
 
         break;
       }
     }
-    if (paragraphNumber >= text.size())
+    if (paragraphNumber >= formattedText.size())
       break;
   }
 }
 
-void TextLabel::SetText(const std::string &string) {
-  SetText(std::vector<std::string>({string}));
+void TextLabel::TextFormading() {
+  formattedText = text;
+
+  int numberingSize = options.lineNumbering * 4;
+  int tabSize = std::max(options.tabSize - (!options.numberingOverTabs) * numberingSize, 0);
+
+  for (int paragraphNumber = 0; paragraphNumber < formattedText.size();
+       paragraphNumber++) {
+    formattedText[paragraphNumber].insert(0, std::string(tabSize, ' '));
+
+    std::string paragraphNumberString;
+    if (options.lineNumbering) {
+      paragraphNumberString =
+          (std::clamp(paragraphNumber, 0, 8) == paragraphNumber ? " " : "") +
+          std::to_string(paragraphNumber + 1) +
+          (char)options.lineNumberingCharacter + ' ';
+    }
+
+    formattedText[paragraphNumber].insert(tabSize, paragraphNumberString);
+  }
 }

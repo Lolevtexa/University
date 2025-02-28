@@ -1,0 +1,33 @@
+\documentclass[a4paper,fleqn]{article}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1cm]{geometry} 
+\setlength{\arraycolsep}{2pt} 
+\usepackage[utf8]{inputenc}  
+\usepackage[russian]{babel}  
+\usepackage{amsmath, amssymb} 
+\usepackage{pgffor}          
+\usepackage{setspace}        
+\usepackage{parskip}
+
+% Отключаем отступы между абзацами и уменьшаем межстрочный интервал
+\parskip=0pt
+\setstretch{0.5}
+\allowdisplaybreaks
+
+\newcommand{\hm}[1]{#1\nobreak\discretionary{}{\hbox{\ensuremath{#1}}}{}}
+
+% Убираем выравнивание по ширине и прижимаем к левому краю
+
+\begin{document}
+
+\title{Решения задач}
+\author{Николаев Всеволод Юрьевич, группа №4395}
+\date{\today}
+\maketitle
+
+% Автоматическое подключение всех .tex файлов из папки tex/
+\foreach \x in {27, 28} {  
+    \section*{Задача \x}
+    \input{tex/\x.tex}
+}
+
+\end{document}

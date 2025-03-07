@@ -1,0 +1,33 @@
+\begin{eqnarray*}
+  \int (x^2 + 3x + 5) \cos 2x\, dx
+  = \begin{bmatrix}
+    \begin{array}{ll}
+      u = x^2 + 3x + 5, & du = (2x + 3)\, dx \\
+      dv = \cos 2x\, dx & v = \int dv = \int \cos 2x\, dx = \dfrac{1}{2} \sin 2x
+    \end{array}
+  \end{bmatrix}
+  = \int u\, dv = uv - \int v\, du
+  =\\= \dfrac{1}{2}(x^2 + 3x + 5) \sin 2x 
+  - \dfrac{1}{2} \int (2x + 3) \sin 2x\, dx
+  = \begin{bmatrix}
+    \begin{array}{ll}
+      u = 2x + 3, & du = 2\, dx \\
+      dv = \sin 2x\, dx & v = \int dv = \int \sin 2x\, dx = -\dfrac{1}{2} \cos 2x
+    \end{array}
+  \end{bmatrix}
+  =\\= \dfrac{1}{2}(x^2 + 3x + 5) \sin 2x 
+  + \dfrac{1}{4}(2x + 3) \cos 2x 
+  - \dfrac{1}{2}\int \cos 2x\, dx
+  =\\= \dfrac{1}{2}(x^2 + 3x + 5) \sin 2x 
+  + \dfrac{1}{4}(2x + 3) \cos 2x 
+  - \dfrac{1}{4} \sin 2x
+  + C
+\end{eqnarray*}
+
+\(
+\textbf{Ответ:}
+\dfrac{1}{2}(x^2 + 3x + 5) \sin 2x 
++ \dfrac{1}{4}(2x + 3) \cos 2x 
+- \dfrac{1}{4} \sin 2x
++ C
+\)

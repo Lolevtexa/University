@@ -1,0 +1,20 @@
+\begin{eqnarray*}
+  \int \dfrac{dx}{1 + \sin^2 x}  
+  = \int \dfrac{\dfrac{1}{\cos^2 x}}{\dfrac{1}{\cos^2 x} + \dfrac{\sin^2 x}{\cos^2 x}}\, dx
+  = \int \dfrac{1}{1 + 2 \tg^2 x} \dfrac{1}{\cos^2 x}\, dx
+  = \begin{bmatrix}
+    t = \sqrt{2} \tg x\\
+    dt = \sqrt{2} \dfrac{1}{\cos^2 x}\, dx
+  \end{bmatrix}
+  = \dfrac{1}{\sqrt{2}} \int \dfrac{dt}{1 + t^2}
+  =\\= \dfrac{\arctg t}{\sqrt{2}}
+  + C
+  = \dfrac{\arctg(\sqrt{2} \tg x)}{\sqrt{2}}
+  + C
+\end{eqnarray*}
+
+\(
+\textbf{Ответ:}
+\dfrac{\arctg(\sqrt{2} \tg x)}{\sqrt{2}}
++ C
+\)

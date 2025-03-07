@@ -1,0 +1,27 @@
+\begin{eqnarray*}
+  \int \dfrac{dx}{\cos^4 x}
+  = \int \dfrac{\cos^2 x + \sin^2 x}{\cos^4 x}\, dx
+  = \int \dfrac{dx}{\cos^2 x} 
+  + \int \dfrac{\tg^2 x}{\cos^2 x}\, dx
+  = \tg x
+  + \int \dfrac{\tg^2 x}{\cos^2 x}\, dx
+  = \begin{bmatrix}
+    t = \tg x \\
+    dt = \dfrac{dx}{\cos^2 x}
+  \end{bmatrix}
+  =\\= \tg x
+  + \int t^2\, dt
+  = \tg x 
+  + \dfrac{t^3}{3}
+  + C
+  = \tg x 
+  + \dfrac{\tg^3 x}{3}
+  + C
+\end{eqnarray*}
+
+\(
+\textbf{Ответ:}
+\tg x 
+  + \dfrac{\tg^3 x}{3}
+  + C
+\)

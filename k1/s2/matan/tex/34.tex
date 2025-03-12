@@ -1,13 +1,36 @@
 \begin{eqnarray*}
   \int \dfrac{dx}{x \sqrt{2 + x - x^2}}
   = \int \dfrac{dx}{x \sqrt{(2 - x)(1 + x)}}
-  = \int
+  = \begin{bmatrix}
+    \begin{array}{l}
+      t = \sqrt{\dfrac{x + 1}{2 - x}},\, x = \dfrac{2t^2 - 1}{t^2 + 1}\\
+      dx = \dfrac{4t(t^2 + 1) - 2t(2t^2 - 1)}{(t^2 + 1)^2}\, dt
+      = \dfrac{6t}{(t^2 + 1)^2}\, dt
+    \end{array}
+  \end{bmatrix}
+  =\\= \int \dfrac{\dfrac{6t}{(t^2 + 1)^2}}{\dfrac{2t^2 - 1}{t^2 + 1} t (2 - \dfrac{2t^2 - 1}{t^2 + 1})}\, dt
+  = 2 \int \dfrac{dt}{(2t^2 - 1)}
+  = 2 \int \dfrac{dt}{(\sqrt{2}t - 1)(\sqrt{2}t + 1)}
+  =\\= 2 \int \dfrac{dt}{\sqrt{2}t - 1}
+  - 2 \int \dfrac{dt}{\sqrt{2}t + 1}
+  = \begin{bmatrix}
+    \begin{array}{ll}
+      y = \sqrt{2}t - 1 & z = \sqrt{2}t + 1\\
+      dy = \sqrt{2}\, dt& dz = \sqrt{2}\, dt
+    \end{array}
+  \end{bmatrix}
+  =\\= \dfrac{1}{\sqrt{2}} \int \dfrac{dy}{y}
+  - \dfrac{1}{\sqrt{2}} \int \dfrac{dz}{z}
+  = \dfrac{1}{\sqrt{2}} (\ln|y| - \ln|z|)
+  + C
+  = \dfrac{1}{\sqrt{2}} (\ln|\sqrt{2}t - 1| - \ln|\sqrt{2}t + 1|)
+  + C
+  =\\= \dfrac{1}{\sqrt{2}} (\ln|\sqrt{2}\sqrt{\dfrac{x + 1}{2 - x}} - 1| - \ln|\sqrt{2}\sqrt{\dfrac{x + 1}{2 - x}} + 1|)
+  + C
 \end{eqnarray*}
 
 \(
 \textbf{Ответ:}
-\dfrac{1}{2}(x^2 + 3x + 5) \sin 2x 
-+ \dfrac{1}{4}(2x + 3) \cos 2x 
-- \dfrac{1}{4} \sin 2x
+\dfrac{1}{\sqrt{2}} (\ln|\sqrt{2}\sqrt{\dfrac{x + 1}{2 - x}} - 1| - \ln|\sqrt{2}\sqrt{\dfrac{x + 1}{2 - x}} + 1|)
 + C
 \)

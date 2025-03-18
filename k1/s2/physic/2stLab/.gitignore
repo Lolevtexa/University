@@ -1,0 +1,23 @@
+# LaTeX intermediate and configuration files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.bbl
+*.blg
+
+# Generated documents
+*.ps
+*.dvi
+
+# Backup and temporary files
+*~
+*.tmp
+*.bak
+*.sav

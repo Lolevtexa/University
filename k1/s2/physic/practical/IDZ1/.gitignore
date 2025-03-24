@@ -1,3 +1,4 @@
+# Python artifacts
 __pycache__/
 *.py[cod]
 *.so
@@ -8,3 +9,16 @@ build/
 .env
 .venv/
 .ipynb_checkpoints/
+
+# LaTeX artifacts
+_minted/
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.gz
+*.minted

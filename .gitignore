@@ -1,1 +1,45 @@
 *.Identifier
+
+# Компилированные файлы LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.synctex
+*.xdv
+
+# Временные файлы LaTeX
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.glsdefs
+
+# Редакторские файлы
+*.bak
+*.swp
+*.swo
+
+# TeXstudio и другие IDE файлы
+*.synctex.gz(busy)
+*.synctex.gz.lock
+*.run.xml
+*.bcf
+
+.fdb_latexmk
+.pyc

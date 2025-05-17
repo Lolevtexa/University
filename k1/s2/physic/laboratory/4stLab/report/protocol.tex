@@ -1,0 +1,37 @@
+\begin{center}
+	{\Large \textbf{Протокол наблюдений}}\\
+	Лабораторной работе №11 \\
+	\textbf{«Исследование закономерностей теплового излучения нагретого тела»}\\
+	\textbf{Николаев Всеволод Юрьевич\, 4395}
+\end{center}
+
+\begin{table}[H]
+	\centering
+	\caption{Зависимость мощности излучения \( P \) от температуры тела \( T \) \\
+		\small \( a_2 = 1{,}441 \cdot 10^{-2}\,\text{м} \cdot \text{К}, \quad \alpha_T = 0{,}92 \)}
+	\label{tab:temp-emission}
+	\begin{tblr}{
+			vlines,
+			hlines,
+			cells = {c},
+			cell{6}{2} = {c = 5}{},
+			cell{6}{7} = {c = 4}{},
+			cell{7}{3} = {c = 4}{},
+			cell{7}{7} = {c = 4}{},
+		}
+		№                                                                         & Разм.                                  & 1     & 2     & 3     &       &                                                                &       &       & \(\theta_i\)       \\
+		\(I\)                                                                     & A                                      & \quad & \quad & \quad & \quad & \quad                                                          & \quad & \quad & \(\theta_I = \)    \\
+		\(U\)                                                                     & B                                      &       &       &       &       &                                                                &       &       & \(\theta_U = \)    \\
+		\(P = IU\)                                                                & Вт                                     &       &       &       &       &                                                                &       &       &                    \\
+		\(\theta_P = U \theta_I + I \theta_U\)                                    &                                        &       &       &       &       &                                                                &       &       &                    \\
+		Цвет светофильтра                                                         & Жёлтый, \(t_H < 1400\,^\circ\text{C}\) &       &       &       &       & Красный, \(1400\,^\circ\text{C} < t_H < 2000\,^\circ\text{C}\) &       &       &                    \\
+		\(\lambda\)                                                               & нм                                     & 600   &       &       &       & 665                                                            &       &       &                    \\
+		\(t_H\)                                                                   & \(^\circ\text{C}\)                     &       &       &       &       &                                                                &       &       & \(\theta_{t_H} =\) \\
+		\(T_H = t_H + 273\)                                                       & K                                      &       &       &       &       &                                                                &       &       & \(\theta_{T_H} =\) \\
+		\(T = \frac{T_H}{1 + \frac{\lambda T_H \ln \alpha_T}{a_2}}\)              & K                                      &       &       &       &       &                                                                &       &       &                    \\
+		\(\theta_T = \left(\frac{T}{T_H}\right)^4 \theta_{T_H}\)                  & K                                      &       &       &       &       &                                                                &       &       &                    \\
+		\(a = \frac{P}{T^4}\)                                                     &                                        &       &       &       &       &                                                                &       &       &                    \\
+		\(\theta_a = a \left( \frac{\theta_P}{P} + \frac{4 \theta_T}{T} \right)\) &                                        &       &       &       &       &                                                                &       &       &                    \\
+	\end{tblr}
+\end{table}
+

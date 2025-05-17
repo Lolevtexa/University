@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        
+        {
+            "name": "Debug with clang++",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/interference",
+            "args": [
+                "${workspaceFolder}/data/params.txt",
+                "${workspaceFolder}/data/data.txt"
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build (make in build/)",
+            "stopOnEntry": false
+        },
+        {
+            "name": "Rub plot",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/plot.py",
+            "args": [
+                "${workspaceFolder}/data/data.txt",
+                "${workspaceFolder}/data/params.txt",
+                "${workspaceFolder}/report/figures/intensity_plot.png"
+
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false
+        }
+    ]
+}

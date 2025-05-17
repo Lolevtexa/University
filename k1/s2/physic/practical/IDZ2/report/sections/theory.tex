@@ -1,0 +1,22 @@
+\section{Теоретические положения}
+Общая формула интенсивности от трёх когерентных источников на точке $x$ экрана:
+\[
+k = \frac{2\pi}{\lambda}, 
+\quad
+l_i(x) = \sqrt{(x - x_i)^2 + y_i^2},
+\]
+\[
+E_i(t;x) = A_i\cos\!\bigl(\omega t - k\,l_i(x) + \varphi_i\bigr), 
+\quad
+E_\Sigma = \sum_{i=1}^3 E_i,
+\]
+\[
+I(x) = \frac1T\int_0^T E_\Sigma^2\,dt
+= \frac12\sum_{i=1}^3 A_i^2 
+  + \sum_{1\le i<j\le3} A_iA_j\cos\!\bigl(k(l_i-l_j)+\varphi_i-\varphi_j\bigr).
+\]
+Задача сводится к численному вычислению $I(x)$ на сетке $x\in[-5,5]$ и поиску точки
+максимума $x_{\max}$:
+\[
+x_{\max} = \arg\max_{x} I(x).
+\]

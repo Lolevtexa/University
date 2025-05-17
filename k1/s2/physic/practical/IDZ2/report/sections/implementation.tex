@@ -1,0 +1,25 @@
+\section{Реализация}
+\subsection{C++}
+Код разбит на модули:
+\begin{itemize}
+  \item \texttt{include/calc.h}, \texttt{src/calc.cpp} — функции $k(\lambda)$, $l_i$, $I(x)$;
+  \item \texttt{src/utils.cpp} — чтение параметров из \texttt{params.txt};
+  \item \texttt{src/main.cpp} — дискретизация, поиск $x_{\max}$ и запись в \texttt{IDZ2.txt}.
+\end{itemize}
+Сборка через CMake и компилятор \texttt{clang++}:
+\begin{verbatim}
+mkdir build && cd build
+cmake ..
+make
+\end{verbatim}
+
+\subsection{Python}
+Скрипт \texttt{scripts/plot.py} принимает три аргумента:
+\texttt{data.txt}, \texttt{params.txt}, \texttt{output\_image.png}.
+Строит график $I(x)$, отмечает:
+\begin{itemize}
+  \item положения источников $(x_i,y_i)$,
+  \item значения $I(x_i)$,
+  \item точку максимума $(x_{\max},I_{\max})$.
+\end{itemize}
+Результат сохраняется в \texttt{figures/intensity\_with\_sources.png}.

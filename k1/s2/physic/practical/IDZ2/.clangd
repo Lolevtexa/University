@@ -1,0 +1,8 @@
+If:
+  PathMatch: 
+    - .*\.cpp
+    - .*\.h
+    - .*\.hpp
+CompileFlags:
+  Add: 
+    - --include-directory=/mnt/d/LETI/k1/s2/physic/practical/IDZ2/include

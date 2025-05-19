@@ -1,12 +1,20 @@
 \section{Реализация}
 \subsection{C++}
-Код разбит на модули:
+
+Код проекта разбит на модули:
 \begin{itemize}
-  \item \texttt{include/calc.h}, \texttt{src/calc.cpp} — функции $k(\lambda)$, $l_i$, $I(x)$;
-  \item \texttt{src/utils.cpp} — чтение параметров из \texttt{params.txt};
-  \item \texttt{src/main.cpp} — дискретизация, поиск $x_{\max}$ и запись в \texttt{IDZ2.txt}.
+  \item \texttt{include/calc.h}, \texttt{src/calc.cpp} — вычисление волнового числа, длины до источников, электрического поля и интенсивности;
+  \item \texttt{src/utils.cpp} — считывание параметров из \texttt{params.txt};
+  \item \texttt{src/main.cpp} — поиск точки максимума интенсивности и запись результата в \texttt{IDZ2.txt}.
 \end{itemize}
-Сборка через CMake и компилятор \texttt{clang++}:
+
+Алгоритм поиска $x_{\max}$ реализован в два этапа:
+\begin{enumerate}
+  \item Грубый перебор с шагом $0.01$ по отрезку $[-H, H]$ позволяет определить приближённое положение максимума.
+  \item Далее запускается уточнение методом дихотомии. На каждом шаге сравниваются значения $I(x)$ немного левее и правее текущей середины отрезка. Интервал сужается в сторону большего значения. После 60 итераций достигается точность около $10^{-8}$.
+\end{enumerate}
+
+Сборка выполняется через CMake:
 \begin{verbatim}
 mkdir build && cd build
 cmake ..

@@ -1,0 +1,5 @@
+g++ test/push_back.cpp lib/List.cpp lib/Node.cpp -o out/push_back.out && ./out/push_back.out > py/push_back.py && python3 py/push_back.py
+g++ test/push_before_index.cpp lib/List.cpp lib/Node.cpp -o out/push_before_index.out && ./out/push_before_index.out > py/push_before_index.py && python3 py/push_before_index.py
+g++ test/reverse.cpp lib/List.cpp lib/Node.cpp -o out/reverse.out && ./out/reverse.out > py/reverse.py && python3 py/reverse.py
+g++ test/push_list_before_index.cpp lib/List.cpp lib/Node.cpp -o out/push_list_before_index.out && ./out/push_list_before_index.out > py/push_list_before_index.py && python3 py/push_list_before_index.py
+g++ Source.cpp lib/List.cpp lib/Node.cpp -o out/Source.out && ./out/Source.out

@@ -1,0 +1,45 @@
+[privet]=>NULL
+||
+\/
+[poka]=>NULL
+||
+\/
+[privet]=>NULL
+||
+\/
+[kak dela?]=>NULL
+||
+\/
+[privet]=>NULL
+||
+\/
+[vse horosh]=>[o.]=>NULL
+||
+\/
+[privet]=>NULL
+||
+\/
+NULL
+
+[privet]=>NULL
+||
+\/
+[poka]=>NULL
+||
+\/
+[privet]=>NULL
+||
+\/
+[kak dela?]=>NULL
+||
+\/
+[privet]=>NULL
+||
+\/
+[vse horosh]=>[o.]=>NULL
+||
+\/
+[asfdasdf]=>NULL
+||
+\/
+NULL

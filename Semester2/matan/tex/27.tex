@@ -1,0 +1,55 @@
+\[
+\int \sin^3 x \cos^2 x\, dx = \int \sin^3 x\, dx - \int \sin^5 x\, dx
+\]
+
+\[
+\int \sin^5 x\, dx =
+    \begin{bmatrix}
+        \begin{array}{ll}
+            u = \sin^4 x, & du = 4\sin^3 x \cos x \,dx \\
+            dv = \sin x \,dx, & v = -\cos x
+        \end{array}
+    \end{bmatrix} =
+    uv - \int v\, du =
+    -\sin^4 x \cos x + 4 \int \sin^3 x \cos^2 x\, dx
+\]
+
+\[
+\int \sin^3 x \cos^2 x\, dx = \int \sin^3 x\, dx + \sin^4 x \cos x - 4 \int \sin^3 x \cos^2 x\, dx
+\]
+
+\[
+5 \int \sin^3 x \cos^2 x\, dx = \int \sin^3 x\, dx + \sin^4 x \cos x; \quad 
+\int \sin^3 x \cos^2 x\, dx = \frac{\int \sin^3 x\, dx + \sin^4 x \cos x}{5}
+\]
+
+\[
+\int \sin^3 x\, dx =
+    \begin{bmatrix}
+        \begin{array}{ll}
+            u = \sin^2 x, & du = 2\sin x \cos x \,dx \\
+            dv = \sin x \,dx, & v = -\cos x
+        \end{array}
+    \end{bmatrix} =
+    uv - \int v\, du =
+    -\sin^2 x \cos x + 2 \int \sin x \cos^2 x\, dx =
+\]
+\[
+= -\sin^2 x \cos x + 2 \int \sin x\, dx - 2 \int \sin^3 x\, dx = 
+  -\sin^2 x \cos x - 2 \cos x - 2 \int \sin^3 x\, dx
+\]
+
+\[
+3 \int \sin^3 x\, dx = -\sin^2 x \cos x - 2 \cos x; \quad 
+\int \sin^3 x\, dx = - \dfrac{\sin^2 x \cos x + 2 \cos x}{3} 
+\]
+
+\[
+\int \sin^3 x \cos^2 x\, dx =
+\dfrac{- \dfrac{\sin^2 x \cos x + 2 \cos x}{3} + \sin^4 x \cos x}{5} = 
+\cos x \cdot \dfrac{3 \sin^4 x - \sin^2 x - 2}{15} + C
+\]
+
+\[
+\textbf{Ответ:} \quad \cos x \cdot \dfrac{3 \sin^4 x - \sin^2 x - 2}{15} + C
+\]

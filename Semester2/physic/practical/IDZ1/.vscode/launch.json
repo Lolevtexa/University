@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug with clang++",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/solver",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build (make in build/)",
+            "stopOnEntry": false
+        }
+    ]
+}

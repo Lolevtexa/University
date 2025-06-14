@@ -1,0 +1,13 @@
+all:
+	cd build/; mkdir -p StringNode; mkdir -p String; mkdir -p TextNode; mkdir -p Text; mkdir -p Task; cd ../
+	cd build/; rm -f */*.o; cd ../
+
+	cd build/StringNode/; g++ -c -Wall ../../lib/StringNode/*.cpp; cd ../../
+	cd build/String/;     g++ -c -Wall ../../lib/String/*.cpp;     cd ../../
+	cd build/TextNode/;   g++ -c -Wall ../../lib/TextNode/*.cpp;   cd ../../
+	cd build/Text/;       g++ -c -Wall ../../lib/Text/*.cpp;       cd ../../
+	cd build/Task/;       g++ -c -Wall ../../lib/Task/*.cpp;       cd ../../
+
+	g++ -Wall build/*/*.o src/Main.cpp -o build/build.exe
+
+	./build/build.exe   

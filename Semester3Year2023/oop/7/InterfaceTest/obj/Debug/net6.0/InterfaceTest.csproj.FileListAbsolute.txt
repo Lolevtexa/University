@@ -1,0 +1,15 @@
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/bin/Debug/net6.0/InterfaceTest
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/bin/Debug/net6.0/InterfaceTest.deps.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/bin/Debug/net6.0/InterfaceTest.runtimeconfig.json
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/bin/Debug/net6.0/InterfaceTest.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/bin/Debug/net6.0/ref/InterfaceTest.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/bin/Debug/net6.0/InterfaceTest.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.csproj.AssemblyReference.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.AssemblyInfoInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.AssemblyInfo.cs
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.csproj.CoreCompileInputs.cache
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/ref/InterfaceTest.dll
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.pdb
+/home/lolevtexa/data/proga/kurs2/sem3/oop/7/InterfaceTest/obj/Debug/net6.0/InterfaceTest.genruntimeconfig.cache

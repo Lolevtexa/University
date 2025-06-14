@@ -1,6 +1,0 @@
-g++ src/Example.cpp -o build/Example.out && ./build/Example.out
-g++ src/CheckingHeight.cpp -o build/CheckingHeight.out && time ./build/CheckingHeight.out
-g++ src/CheckingInsert.cpp -o build/CheckingInsert.out && time ./build/CheckingInsert.out
-g++ src/CheckingRemove.cpp -o build/CheckingRemove.out && time ./build/CheckingRemove.out
-
-python3 src/Plot.py

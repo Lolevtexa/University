@@ -1,0 +1,23 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amssymb} 
+\usepackage{pgffor}
+
+\title{Решение индивидуального домашнего задания №1}
+\author{Студент: Николаев Всеволод Юрьевич \\ 
+Группа: 4395\\
+Вариант: 44
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\foreach \x in {1,2,3,4} {  
+    \section*{Задача \x}
+    \input{tex/\x.tex}
+}
+\end{document}

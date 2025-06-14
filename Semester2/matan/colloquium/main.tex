@@ -1,0 +1,185 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+% --- Здесь объявляем все окружения ---
+\newtheorem{definition}{Определение}[section]
+
+\makeatletter
+\newenvironment{customtheorem}[1][]{%
+  \par\noindent\textbf{Теорема}%
+  % Если пользователь написал \begin{customtheorem}[НАЗВАНИЕ],
+  % то #1 НЕ пустая; если пустая -- не выводим ничего.
+  \@ifempty{#1}{}{\,(\textit{#1})}%
+  .\par % точка, перенос строки + пол-эм отступ
+}{%
+  \par\bigskip % небольшой вертикальный отступ в конце
+}
+\makeatother
+
+\newenvironment{customexample}{%
+  \par\noindent\textbf{Пример.}\par%
+}{%
+  \par\bigskip
+}
+
+\newenvironment{proofplan}{%
+  \par\noindent\textbf{План доказательства.}\par%
+}{%
+  \hfill$\square$\par\bigskip
+}
+
+\newenvironment{customproof}{%
+  \par\noindent\textbf{Доказательство.}\par%
+}{%
+  \hfill$\blacksquare$\par\bigskip
+}
+% -------------------------------------
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+\section{Равномерная непрерывность. Примеры. Теорема Кантора}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/1/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/1/answer.tex}
+
+
+\newpage
+\section{Дифференциал функции. Теорема Ферма. Теорема Ролля. Примеры.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/2/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/2/answer.tex}
+
+
+\newpage
+\section{Теорема Лагранжа. Необходимoе и достаточное условие постоянства дифференцируемой функции на промежутке. Необходимое и достаточное условие монотонности дифференцируемой функции на промежутке.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/3/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/3/answer.tex}
+
+\newpage
+\section{Равномерная непрерывность. Примеры. Теорема Кантора о равномерной непрерывности.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/4/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/4/answer.tex}
+
+\newpage
+\section{Вывод рядов Тейлора для функций y=exp(x), y=sinx, y=cosx через следствие из теоремы Лагранжа. Формула Эйлера.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/5/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/5/answer.tex}
+
+\newpage
+\section{Теорема Коши. Правило Лопиталя (доказательство – только для случая 0/0). Примеры, когда правило неприменимо.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/6/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/6/answer.tex}
+
+\newpage
+\section{Формула Тейлора для многочлена. Формула Тейлора с остатком в форме Пеано.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/7/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/7/answer.tex}
+
+\newpage
+\section{Достаточные условия существования экстремума (по второй производной).}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/8/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/8/answer.tex}
+
+\newpage
+\section{Теорема Лиувилля. Пример трансцендентного числа.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/9/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/9/answer.tex}
+
+\newpage
+\section{Формулы Маклорена для функций y=exp(x), y=sinx, y=cosx, y=ln(1+x), y=pow((1+x),a).}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/10/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/10/answer.tex}
+
+\newpage
+\section{Формула Тейлора с остатком в форме Лагранжа. Приближенные вычисления по формуле Тейлора.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/11/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/11/answer.tex}
+
+\newpage
+\section{Формула Стирлинга (с эквивалентностью).}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/12/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/12/answer.tex}
+
+\newpage
+\section{Формула Стирлинга (с равенством).}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/13/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/13/answer.tex}
+
+\newpage
+\section{Определение интеграла Римана. Отличие от «обычного» предела.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/14/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/14/answer.tex}
+
+\newpage
+\section{Формула Ньютона-Лейбница.}
+
+\subsection*{Вспомогательные понятия}
+\input{questions/15/auxiliary.tex}
+
+\subsection*{Ответ на вопрос}
+\input{questions/15/answer.tex}
+
+\end{document}

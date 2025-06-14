@@ -1,0 +1,104 @@
+\begin{eqnarray*}
+  \int \dfrac{dx}{\tg^8 x}
+  = \int \dfrac{\cos^8 x}{\sin^8 x}\, dx
+  = \int \dfrac{(1 - sin^2 x)^4}{\sin^8 x}\, dx
+  = \int \dfrac{sin^8 x - 4 sin^6 x + 6 sin^4 x - 4 sin^2 x + 1}{\sin^8 x}\, dx
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  +\\+ 6 \int \dfrac{dx}{\sin^4 x}
+  - 4 \int \dfrac{dx}{\sin^6 x}
+  + \int \dfrac{dx}{\sin^8 x}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+  \int \dfrac{dx}{\sin^{2n} x} =
+  \begin{bmatrix}
+    \begin{array}{ll}
+      u = \dfrac{1}{\sin^{2n-2} x}, & du = \dfrac{- (2n - 3) \sin^{2n-3} x \cos x}{\sin^{4n-4} x} dx = - (2n - 3) \dfrac{\cos x}{\sin^{2n-1} x}\\
+      dv = \dfrac{dx}{\sin^{2} x}, & v = \int dv = \int \dfrac{dx}{\sin^{2} x} = -\ctg x = \dfrac{\cos x}{\sin x}
+    \end{array}
+  \end{bmatrix}
+  = \int u\, dv = uv - \int v\, du
+  =\\= -\dfrac{\cos x}{\sin^{2n-1} x} 
+  - (2n - 3) \int \dfrac {\cos^2 x}{\sin^{2n} x} dx
+  = -\dfrac{\cos x}{\sin^{2n-1} x}
+  - (2n - 3) \int \dfrac {dx}{\sin^{2n} x}
+  + (2n - 3) \int \dfrac {dx}{\sin^{2n - 2} x}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+  (2n - 2) \int \dfrac{dx}{\sin^{2n} x}
+  = -\dfrac{\cos x}{\sin^{2n-1} x}
+  + (2n - 3) \int \dfrac {dx}{\sin^{2n - 2} x}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+  \int \dfrac{dx}{\sin^{2n} x}
+  = \dfrac{-\dfrac{\cos x}{\sin^{2n-1} x} + (2n - 3) \int \dfrac {dx}{\sin^{2n - 2} x}}{(2n - 2)}
+  = \dfrac{2n - 3}{2n - 2} \int \dfrac {dx}{\sin^{2n - 2} x}
+  - \dfrac{\cos x}{(2n - 2) \sin^{2n-1} x}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+  \int \dfrac{dx}{\tg^8 x}
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  + 6 \int \dfrac{dx}{\sin^4 x}
+  - 4 \int \dfrac{dx}{\sin^6 x}
+  + \int \dfrac{dx}{\sin^8 x}
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  + 6 \int \dfrac{dx}{\sin^4 x}
+  -\\- 4 \int \dfrac{dx}{\sin^6 x}
+  + \dfrac{5}{6} \int \dfrac {dx}{\sin^6 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  + 6 \int \dfrac{dx}{\sin^4 x}
+  - \dfrac{19}{6} \int \dfrac{dx}{\sin^6 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  =\\= \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  + 6 \int \dfrac{dx}{\sin^4 x}
+  - \dfrac{19}{6} (\dfrac{3}{4} \int \dfrac {dx}{\sin^4 x}
+  - \dfrac{\cos x}{4 \sin^5 x})
+  - \dfrac{\cos x}{6 \sin^7 x}
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  +\\+ 6 \int \dfrac{dx}{\sin^4 x}
+  - \dfrac{19}{8} \int \dfrac {dx}{\sin^4 x}
+  + \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  + \dfrac{29}{8} \int \dfrac {dx}{\sin^4 x}
+  + \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x}
+  -\\- \dfrac{\cos x}{6 \sin^7 x}
+  = \int\, dx
+  - 4 \int \dfrac{dx}{\sin^2 x}
+  + \dfrac{29}{8} (\dfrac{1}{2} \int \dfrac {dx}{\sin^2 x}
+  - \dfrac{\cos x}{2 \sin^3 x})
+  + \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  = \int\, dx
+  -\\- 4 \int \dfrac{dx}{\sin^2 x}
+  + \dfrac{29}{16} \int \dfrac {dx}{\sin^2 x}
+  - \dfrac{29}{16} \dfrac{\cos x}{\sin^3 x}
+  + \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  = \int\, dx
+  - \dfrac{35}{16} \int \dfrac {dx}{\sin^2 x}
+  - \dfrac{29}{16} \dfrac{\cos x}{\sin^3 x}
+  +\\+ \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  = x
+  + \dfrac{35}{16} \ctg x
+  - \dfrac{29}{16} \dfrac{\cos x}{\sin^3 x}
+  + \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x}
+  - \dfrac{\cos x}{6 \sin^7 x}
+  + C
+\end{eqnarray*}
+
+\(
+\textbf{Ответ:} \quad x + \dfrac{35}{16} \ctg x - \dfrac{29}{16} \dfrac{\cos x}{\sin^3 x} + \dfrac{19}{24} \dfrac{\cos x}{\sin^5 x} - \dfrac{\cos x}{6 \sin^7 x} + C
+\)

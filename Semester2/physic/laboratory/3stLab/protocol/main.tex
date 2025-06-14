@@ -1,0 +1,171 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularray}
+\geometry{top=5mm,bottom=15mm,left=15mm,right=15mm}
+
+\usepackage{caption}
+\captionsetup[table]{skip=0pt}    % Убрать отступ между caption и таблицей
+
+\setlength{\textfloatsep}{0pt} 
+\setlength{\intextsep}{6pt}
+\setlength{\floatsep}{0pt}
+
+\begin{document}
+
+\begin{center}
+	{\Large \textbf{Протокол наблюдений}}\\
+	\textbf{Лабораторная работа №\,4 «Дифракционная решётка»}\\
+	\textbf{Николаев Всеволод Юрьевич\, 4395}
+\end{center}
+
+\begin{table}[htb]
+	\centering
+	\caption{Константы эксперимента}
+	\begin{tblr}{
+		colspec = {Q[wd=3cm]Q[wd=4.2cm]Q[wd=4cm]Q[wd=3cm]},
+		vlines = {},
+		hlines = {},
+		cells = {valign = m, halign = c},
+		}
+		Длина волны залёного цвета, $\lambda = \overline{\lambda} \pm \Delta \overline{\lambda} \text{, нм}$ &
+		Постоянная решётки, $d = \overline{d} \pm \Delta \overline{d} \text{, мкм}$                          &
+		Длина решётки, см                                                                                    &
+		Число штрихов $N=\dfrac{L}{\overline{d}}$                                                                  \\
+		$\lambda = 546 \pm 5 \text{, нм} $ $ \text{с } P = 95 \%$                                            &   &
+		1,5 см                                                                                               &     \\
+	\end{tblr}
+\end{table}
+
+\begin{table}[htb]
+	\centering
+	\caption{Определение длины волны и характеристик дифракционной решётки}
+	\label{tab:lambda-params}
+	\begin{tblr}{
+		colspec = {Q[wd=2.1cm]Q[wd=2.4cm]Q[wd=2.6cm]Q[wd=1.6cm]Q[wd=2.8cm]Q[wd=1.7cm]Q[wd=1.6cm]},
+		vlines = {},
+		hlines = {},
+		row{1} = {valign = m, halign = c},
+		cell{2,4,6}{1,2,3} = {r = 2}{},
+			}
+		Цвет спектральной линии                                            &
+		Угловой коэффициент
+		$a = \overline{a} \pm \Delta \overline{a}$                         &
+		Длина волны
+		$\lambda = \overline{\lambda} \pm \Delta \overline{\lambda},\,$ нм &
+		Порядок
+		спектра, $m$                                                       &
+		$D_{\varphi} = \dfrac{m}{\,\overline{d} \cos \varphi_m}$ мин/нм    &
+		$R = mN$                                                           &
+		$\Delta \lambda = \dfrac{\overline{\lambda}}{R}$ нм                                   \\
+		Жёлтая                                                             &   &  & 1 &  &  & \\
+		                                                                   &   &  & 3 &  &  & \\
+
+		Зелёная                                                            &   &  & 1 &  &  & \\
+		                                                                   &   &  & 3 &  &  & \\
+
+		Синяя                                                              &   &  & 1 &  &  & \\
+		                                                                   &   &  & 3 &  &  & \\
+	\end{tblr}
+\end{table}
+
+\begin{table}[htb]
+	\centering
+	\caption{Измерение углов дифракции для линий жёлтого цвета}
+	\begin{tblr}{
+			vlines = {},
+			hlines = {},
+			cells = {c, mode = dmath},
+			cell{2}{1} = {r = 3}{},
+			cell{12}{1} = {r = 3}{},
+		}
+		\left\lvert m \right\rvert                        &
+		\qquad 0 \qquad                                   &
+		\qquad 1 \qquad                                   &
+		\qquad 2 \qquad                                   &
+		\qquad 3 \qquad                                               \\
+		\bar{\alpha}_{+m}                                 &   &  &  & \\
+		                                                  &   &  &  & \\
+		                                                  &   &  &  & \\
+		\varphi_{+m} = \bar{\alpha}_{+m} - \bar{\alpha}_0 &   &  &  & \\
+		a = \frac{\sin(\varphi_{+m})}{m}                  &   &  &  & \\
+		\theta_a = \frac{\cos(\varphi_{+m})}{m}           &   &  &  & \\
+		\theta_a = \frac{\cos(\varphi_{-m})}{m}           &   &  &  & \\
+		a = \frac{\sin(\varphi_{-m})}{m}                  &   &  &  & \\
+		\varphi_{-m} = \bar{\alpha}_{-m} - \bar{\alpha}_0 &   &  &  & \\
+		\bar{\alpha}_{-m}                                 &   &  &  & \\
+		\alpha_{-m}                                       &   &  &  & \\
+		                                                  &   &  &  & \\
+		                                                  &   &  &  & \\
+	\end{tblr}
+\end{table}
+
+\begin{table}[htb]
+	\centering
+	\caption{Измерение углов дифракции для линий зелёного цвета}
+	\begin{tblr}{
+			vlines = {},
+			hlines = {},
+			cells = {c, mode = dmath},
+			cell{2}{1} = {r = 3}{},
+			cell{12}{1} = {r = 3}{},
+		}
+		\left\lvert m \right\rvert                        &
+		\qquad 0 \qquad                                   &
+		\qquad 1 \qquad                                   &
+		\qquad 2 \qquad                                   &
+		\qquad 3 \qquad                                               \\
+		\bar{\alpha}_{+m}                                 &   &  &  & \\
+		                                                  &   &  &  & \\
+		                                                  &   &  &  & \\
+		\varphi_{+m} = \bar{\alpha}_{+m} - \bar{\alpha}_0 &   &  &  & \\
+		a = \frac{\sin(\varphi_{+m})}{m}                  &   &  &  & \\
+		\theta_a = \frac{\cos(\varphi_{+m})}{m}           &   &  &  & \\
+		\theta_a = \frac{\cos(\varphi_{-m})}{m}           &   &  &  & \\
+		a = \frac{\sin(\varphi_{-m})}{m}                  &   &  &  & \\
+		\varphi_{-m} = \bar{\alpha}_{-m} - \bar{\alpha}_0 &   &  &  & \\
+		\bar{\alpha}_{-m}                                 &   &  &  & \\
+		\alpha_{-m}                                       &   &  &  & \\
+		                                                  &   &  &  & \\
+		                                                  &   &  &  & \\
+	\end{tblr}
+\end{table}
+
+\begin{table}[htb]
+	\centering
+	\caption{Измерение углов дифракции для линий синего цвета}
+	\begin{tblr}{
+			vlines = {},
+			hlines = {},
+			cells = {c, mode = dmath},
+			cell{2}{1} = {r = 3}{},
+			cell{12}{1} = {r = 3}{},
+		}
+		\left\lvert m \right\rvert                        &
+		\qquad 0 \qquad                                   &
+		\qquad 1 \qquad                                   &
+		\qquad 2 \qquad                                   &
+		\qquad 3 \qquad                                               \\
+		\bar{\alpha}_{+m}                                 &   &  &  & \\
+		                                                  &   &  &  & \\
+		                                                  &   &  &  & \\
+		\varphi_{+m} = \bar{\alpha}_{+m} - \bar{\alpha}_0 &   &  &  & \\
+		a = \frac{\sin(\varphi_{+m})}{m}                  &   &  &  & \\
+		\theta_a = \frac{\cos(\varphi_{+m})}{m}           &   &  &  & \\
+		\theta_a = \frac{\cos(\varphi_{-m})}{m}           &   &  &  & \\
+		a = \frac{\sin(\varphi_{-m})}{m}                  &   &  &  & \\
+		\varphi_{-m} = \bar{\alpha}_{-m} - \bar{\alpha}_0 &   &  &  & \\
+		\bar{\alpha}_{-m}                                 &   &  &  & \\
+		\alpha_{-m}                                       &   &  &  & \\
+		                                                  &   &  &  & \\
+		                                                  &   &  &  & \\
+	\end{tblr}
+\end{table}
+
+\end{document}

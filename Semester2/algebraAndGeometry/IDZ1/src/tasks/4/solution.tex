@@ -1,0 +1,152 @@
+\begin{enumerate}
+	\item Найдём базис линейной оболочки строк матрицы.
+	      \[
+		      \begin{pmatrix}
+			      3  & -1 & 9  & -2 & 6  \\
+			      1  & 3  & 1  & -2 & 3  \\
+			      -1 & 3  & 1  & 2  & -2 \\
+			      -3 & -5 & -6 & 3  & -7 \\
+			      -1 & -2 & -4 & 0  & -2 \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      \\
+			      \\
+			      = -\text{II} \\
+			      \\
+			      \\
+		      \end{array}
+		      \sim
+		      \begin{pmatrix}
+			      3  & -1 & 9  & -2 & 6  \\
+			      1  & 3  & 1  & -2 & 3  \\
+			      -3 & -5 & -6 & 3  & -7 \\
+			      -1 & -2 & -4 & 0  & -2 \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      -3 \text{II} \\
+			      \\
+			      +3 \text{II} \\
+			      +\text{II}   \\
+		      \end{array}
+		      \sim
+	      \]
+	      \[
+		      \sim
+		      \begin{pmatrix}
+			      0 & -10 & 6  & 4  & -3 \\
+			      1 & 3   & 1  & -2 & 3  \\
+			      0 & 4   & -3 & -3 & 2  \\
+			      0 & 1   & -3 & -2 & 1  \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      +10 \text{IV} \\
+			      -3 \text{IV}  \\
+			      -4 \text{IV}  \\
+			      \\
+		      \end{array}
+		      \sim
+		      \begin{pmatrix}
+			      0 & 0 & -24 & -16 & 7  \\
+			      1 & 0 & 10  & 4   & 0  \\
+			      0 & 0 & 9   & 5   & -2 \\
+			      0 & 1 & -3  & -2  & 1  \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      *15  \\
+			      *36  \\
+			      *40  \\
+			      *120 \\
+		      \end{array}
+		      \sim
+	      \]
+	      \[
+		      \sim
+		      \begin{pmatrix}
+			      0  & 0   & -360 & -240 & 105 \\
+			      36 & 0   & 360  & 144  & 0   \\
+			      0  & 0   & 360  & 200  & -80 \\
+			      0  & 120 & -360 & -240 & 120 \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      +\text{III} \\
+			      -\text{III} \\
+			      \\
+			      +\text{III} \\
+		      \end{array}
+		      \sim
+		      \begin{pmatrix}
+			      0  & 0   & 0   & -40 & 25  \\
+			      36 & 0   & 0   & 56  & 80  \\
+			      0  & 0   & 360 & 200 & -80 \\
+			      0  & 120 & 0   & -40 & 40  \\
+		      \end{pmatrix}.
+	      \]
+	      \[
+		      \begin{pmatrix}
+			      0  & 0   & 0   & -40 & 25  \\
+			      36 & 0   & 0   & 56  & 80  \\
+			      0  & 0   & 360 & 200 & -80 \\
+			      0  & 120 & 0   & -40 & 40  \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      *35 \\
+			      *25 \\
+			      *7  \\
+			      *35 \\
+		      \end{array}
+		      \sim
+		      \begin{pmatrix}
+			      0   & 0    & 0    & -1400 & 875  \\
+			      900 & 0    & 0    & 1400  & 2000 \\
+			      0   & 0    & 2520 & 1400  & -560 \\
+			      0   & 4200 & 0    & -1400 & 4100 \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      \\
+			      +\text{I} \\
+			      +\text{I} \\
+			      -\text{I} \\
+		      \end{array}
+		      \sim
+	      \]
+	      \[
+		      \sim
+		      \begin{pmatrix}
+			      0   & 0    & 0    & -1400 & 875  \\
+			      900 & 0    & 0    & 0     & 2875 \\
+			      0   & 0    & 2520 & 0     & 315  \\
+			      0   & 4200 & 0    & 0     & 3225 \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      *\frac{-1}{175} \\
+			      *\frac{1}{25}   \\
+			      *\frac{1}{315}  \\
+			      *\frac{1}{75}   \\
+		      \end{array}
+		      \sim
+		      \begin{pmatrix}
+			      0 & 0 & 0 & 8 & -5 \\
+			      4 & 0 & 0 & 0 & 5  \\
+			      0 & 0 & 8 & 0 & 1  \\
+			      0 & 8 & 0 & 0 & 1  \\
+		      \end{pmatrix}
+		      \begin{array}{c}
+			      =\text{II} \\
+			      =\text{IV} \\
+			      \\
+			      =\text{I}  \\
+		      \end{array}
+		      \sim
+	      \]
+	      \[
+		      \sim
+		      \begin{pmatrix}
+			      4 & 0 & 0 & 0 & 5  \\
+			      0 & 8 & 0 & 0 & 1  \\
+			      0 & 0 & 8 & 0 & 1  \\
+			      0 & 0 & 0 & 8 & -5 \\
+		      \end{pmatrix}.
+	      \]
+
+	\item Пространство решений — ядро матрицы $A$. Оно одномерно и порождено вектором $x = (10, 1, 1, -5,-8)^T$.
+\end{enumerate}
